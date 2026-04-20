@@ -1,0 +1,11 @@
+{
+  "name": "standard-process",
+  "description": "Structured request-handling workflow for Claude Code. Triages every request (trivial/micro/continuation/substantive) and runs ANALYSE → CHECK → RESEARCH → BRAINSTORM → APPROVE → EXECUTE for substantive work. Prevents scope drift, surfaces assumptions early, and ensures research is saved before code is written.",
+  "version": "1.0.0",
+  "author": {
+    "name": "tungdd2710",
+    "url": "https://github.com/tungdd2710"
+  },
+  "homepage": "https://github.com/tungdd2710/standard-process-claude-skill",
+  "license": "MIT"
+}
