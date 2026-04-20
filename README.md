@@ -31,8 +31,9 @@ Key properties:
 ### Manual install (works today)
 
 ```bash
-# Copy the skill to your user skills directory
-cp -r skills/standard-process ~/.claude/skills/
+# Clone and copy the skill to your user skills directory
+git clone https://github.com/tungdd2710/standard-process-claude-skill
+cp -r standard-process-claude-skill/skills/standard-process ~/.claude/skills/
 ```
 
 Then invoke it with `/standard-process` in any Claude Code session.
