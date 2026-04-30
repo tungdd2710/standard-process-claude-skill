@@ -1,7 +1,7 @@
 {
   "name": "claude-process-skills",
   "description": "A collection of structured workflow skills for Claude Code: standard-process (triage + 6-step ANALYSE→EXECUTE), repo-eval (external repo evaluation with malware/license/transfer gates), model-bench (AI model benchmarking with jurisdiction/dataset/vault gates), plus always-on rules for evidence labeling, security scope, parallel-agent safety, and commit hygiene.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "tungdd2710",
     "url": "https://github.com/tungdd2710"
