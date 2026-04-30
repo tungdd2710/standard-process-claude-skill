@@ -1,7 +1,7 @@
 ---
 name: standard-process
-description: Structured request-handling workflow. Invoke as your FIRST action on every user request. Step 0 triages the request (trivial/micro/continuation/substantive). Substantive requests run ANALYSE → CHECK → RESEARCH → BRAINSTORM → APPROVE → EXECUTE. Prevents scope drift, surfaces assumptions early, and ensures no code is written before research is saved.
-when_to_use: At the start of every user request, before any tool calls. Skip only when the previous turn already triaged and this turn is clearly a direct continuation.
+description: Structured request-handling workflow. Invoke as your FIRST action on every user request UNLESS running as Opus outside of plan mode. Step 0 triages the request (trivial/micro/continuation/substantive). Substantive requests run ANALYSE → CHECK → RESEARCH → BRAINSTORM → APPROVE → EXECUTE. Prevents scope drift, surfaces assumptions early, and ensures no code is written before research is saved.
+when_to_use: At the start of every user request, before any tool calls. Skip when (a) the previous turn already triaged and this turn is clearly a direct continuation, OR (b) the active model is Opus and you are NOT in plan mode (Opus direct-execution is sufficiently thorough that ceremony adds friction; Opus plan-mode still invokes).
 ---
 
 # Standard Process
@@ -112,3 +112,4 @@ At **75% context usage**: STOP and flush before continuing.
 - When the previous turn already completed triage and this turn is clearly the next step in the same task
 - When the user types a direct command with no ambiguity (e.g. "run the tests", "commit this")
 - For pure conversation (not a work request)
+- **When the active model is Opus AND you are NOT in plan mode.** Opus direct-execution is thorough enough that the process ceremony adds friction without meaningful safety gain. Plan-mode Opus still invokes — plan mode is explicitly the state where structured analysis pays off. Sonnet and Haiku continue to auto-invoke in all modes.
